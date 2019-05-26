@@ -1,0 +1,15 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_HOST: tcp://localhost:2375
+  DOCKER_DRIVER: overlay2
+  DOCKER_TAG: registry.kramergroup.science/workflows/matsci-base:latest
+
+build:
+  stage: build
+  script:
+    - docker build -t $DOCKER_TAG .
+    - docker push $DOCKER_TAG
