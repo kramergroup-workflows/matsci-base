@@ -5,7 +5,7 @@ steps:
 - name: kaniko
   image: banzaicloud/drone-kaniko
   settings:
-    username: dada
-    password: dada
+    username: dadadu
+    password: dadadu
     repo: registry.kramergroup.science/workflows/matsci-base
 registry: registry.kramergroup.science
