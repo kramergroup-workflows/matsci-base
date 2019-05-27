@@ -6,9 +6,10 @@ RUN apt-get update && apt-get install --no-install-recommends -y wget curl ssh-c
     bash Miniconda3-latest-Linux-x86_64.sh -b && \
     rm -rf /install
 
-ENV PATH=$PATH:/root/miniconda3/bin
 RUN /root/miniconda3/bin/conda create --name matsci python && \
     /root/miniconda3/bin/conda config --add channels matsci && \
     /root/miniconda3/bin/conda install --channel matsci pymatgen
+
+ENV PATH=$PATH:/root/miniconda3/bin
 
 WORKDIR /data
