@@ -9,6 +9,4 @@ RUN apt-get update && apt-get install --no-install-recommends -y wget curl ssh-c
     /root/miniconda3/bin/conda config --add channels matsci && \
     /root/miniconda3/bin/conda install --channel matsci pymatgen
 
-ENV PATH=$PATH:/root/miniconda3/bin
 
-WORKDIR /data
