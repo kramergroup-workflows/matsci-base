@@ -1,0 +1,11 @@
+kind: pipeline
+name: default
+ 
+steps:
+- name: kaniko
+  image: banzaicloud/drone-kaniko
+  settings:
+    username: dada
+    password: dada
+    repo: registry.kramergroup.science/workflows/matsci-base
+registry: registry.kramergroup.science
