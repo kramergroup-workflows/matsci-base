@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM docker.io/ubuntu
 
 WORKDIR /install
 RUN apt-get update && apt-get install --no-install-recommends -y wget curl ssh-client && rm -rf /var/lib/apt/lists/* && \
